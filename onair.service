@@ -1,0 +1,11 @@
+[Unit]
+Description= On Air Light
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+ExecStart=/usr/bin/python /home/pi/code/onair/onair.py
+
+[Install]
+WantedBy=multi-user.target
